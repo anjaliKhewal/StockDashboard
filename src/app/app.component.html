@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,31 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul>-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <nav class="mdl-layout-title mdl-navigation__link" [routerLink]="['/']">Stock Tracker</nav>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" [routerLink]="['/dashboard']">Dashboard</a>
+        <a class="mdl-navigation__link" [routerLink]="['/manage']">Manage</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Step 1 <main class="mdl-layout__content" style="padding: 20px;">
+  </main>-->
+ <!--  Step 2 <main class="mdl-layout__content" style="padding: 20px;" *ngIf="stocks">
+   <app-summary [stock]="stocks[0]"></app-summary>
+  </main>-->
+   <!-- Step 3 <main class="mdl-layout__content" style="padding: 20px;">
+    <app-dashboard></app-dashboard>
+  </main>
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <app-manage></app-manage>
+  </main>-->
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <router-outlet></router-outlet>
+  </main>
+</div>
 
